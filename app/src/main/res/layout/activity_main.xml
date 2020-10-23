@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo" />
 
     <EditText
@@ -64,21 +64,24 @@
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
         android:backgroundTint="#007FBF"
         android:text="register"
         app:layout_constraintBottom_toBottomOf="@+id/noAccountText"
-        app:layout_constraintTop_toTopOf="@+id/noAccountText"
-        tools:layout_editor_absoluteX="426dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/noAccountText" />
 
     <TextView
         android:id="@+id/noAccountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
         android:text="Need an Account?"
-        android:textSize="18"
-        tools:layout_editor_absoluteX="254dp"
-        tools:layout_editor_absoluteY="873dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/registerButton" />
 
     <TextView
         android:id="@+id/splashText"
@@ -86,7 +89,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
         android:text="Keychain"
-        android:textSize="90"
+        android:textSize="90sp"
         app:layout_constraintBottom_toTopOf="@+id/emailTextBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
