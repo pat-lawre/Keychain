@@ -2,6 +2,7 @@ package com.example.keychain;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,25 +16,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    private enum LoginStatus { // richer return value for describing login status
-        CORRECT_CREDENTIALS, INVALID_EMAIL, INCORRECT_CREDENTIALS
-    }
+    private void register(View v) {
+        Intent i = new Intent(this, CreateAccountActivity.class); // create createAccount activity
+        startActivity(i); // launch createAccount activity
 
-    public void createAccount(View v) {
-        // load createAccount activity
     }
-    public void login(View v) {
+    private void login(View v) {
         TextView t = findViewById(R.id.emailTextBox); // get text inside email text field and store in inputEmail
         String inputEmail = t.getText().toString();
 
-        LoginStatus login;
+        CredentialStatus login;
 
         if(!inputEmail.contains("@") || !inputEmail.contains(".")) { // string validation
-            login = LoginStatus.INVALID_EMAIL;
+            login = CredentialStatus.INVALID_EMAIL;
         } else /*if()*/ {
             // query database for email and password
             // if database doesn't find a match for email
-            login = LoginStatus.INCORRECT_CREDENTIALS;
+            login = CredentialStatus.INCORRECT_CREDENTIALS;
         } /* else {
             login = LoginStatus.CORRECT_CREDENTIALS;
         } */
@@ -43,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         t = findViewById(R.id.passwordTextBox); // get text inside password text field and store in inputPassword
         String inputPassword = t.getText().toString();
     }
-    private void loginResult(LoginStatus loginStatus) {
+
+    private void loginResult(CredentialStatus loginStatus) {
         switch(loginStatus) {
             case CORRECT_CREDENTIALS:
                 // load next activity
