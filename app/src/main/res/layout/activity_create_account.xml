@@ -7,7 +7,7 @@
     tools:context=".CreateAccountActivity">
 
     <ImageView
-        android:id="@+id/logoImage2"
+        android:id="@+id/createAccount_logoImage"
         android:layout_width="560dp"
         android:layout_height="950dp"
         android:alpha="0.15"
@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/createPasswordTextBox"
+        android:id="@+id/createAccount_passwordTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
@@ -29,14 +29,14 @@
         android:gravity="center_horizontal"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/confirmPasswordTextBox"
-        app:layout_constraintEnd_toEndOf="@+id/confirmPasswordTextBox"
+        app:layout_constraintBottom_toTopOf="@+id/createAccount_confirmPasswordTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/createAccount_confirmPasswordTextBox"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/confirmPasswordTextBox"
-        app:layout_constraintTop_toBottomOf="@+id/phoneTextBox" />
+        app:layout_constraintStart_toStartOf="@+id/createAccount_confirmPasswordTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_phoneTextBox" />
 
     <EditText
-        android:id="@+id/confirmPasswordTextBox"
+        android:id="@+id/createAccount_confirmPasswordTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
@@ -45,15 +45,15 @@
         android:gravity="center_horizontal"
         android:hint="Re-enter password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/createAccountButton"
-        app:layout_constraintEnd_toEndOf="@+id/createAccountButton"
+        app:layout_constraintBottom_toTopOf="@+id/createAccount_createAccountButton"
+        app:layout_constraintEnd_toEndOf="@+id/createAccount_createAccountButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/createAccountButton"
-        app:layout_constraintTop_toBottomOf="@+id/createPasswordTextBox"
+        app:layout_constraintStart_toStartOf="@+id/createAccount_createAccountButton"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_passwordTextBox"
         app:layout_constraintVertical_bias="0.552" />
 
     <EditText
-        android:id="@+id/newEmailTextBox"
+        android:id="@+id/createAccount_emailTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -63,14 +63,14 @@
         android:gravity="center_horizontal"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/phoneTextBox"
-        app:layout_constraintEnd_toEndOf="@+id/phoneTextBox"
+        app:layout_constraintBottom_toTopOf="@+id/createAccount_phoneTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/createAccount_phoneTextBox"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/phoneTextBox"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextBox" />
+        app:layout_constraintStart_toStartOf="@+id/createAccount_phoneTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_nameTextBox" />
 
     <EditText
-        android:id="@+id/phoneTextBox"
+        android:id="@+id/createAccount_phoneTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
@@ -79,29 +79,29 @@
         android:gravity="center_horizontal"
         android:hint="Phone Number"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/createPasswordTextBox"
-        app:layout_constraintEnd_toEndOf="@+id/createPasswordTextBox"
+        app:layout_constraintBottom_toTopOf="@+id/createAccount_passwordTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/createAccount_passwordTextBox"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/createPasswordTextBox"
-        app:layout_constraintTop_toBottomOf="@+id/newEmailTextBox" />
+        app:layout_constraintStart_toStartOf="@+id/createAccount_passwordTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_emailTextBox" />
 
     <Button
-        android:id="@+id/createAccountButton"
+        android:id="@+id/createAccount_createAccountButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="132dp"
         android:backgroundTint="#007FBF"
         android:onClick="createAccount"
         android:text="create account"
-        app:layout_constraintBottom_toTopOf="@+id/logoImage2"
+        app:layout_constraintBottom_toTopOf="@+id/createAccount_logoImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_confirmPasswordTextBox"
         app:strokeColor="#FFFFFF" />
 
     <EditText
-        android:id="@+id/nameTextBox"
+        android:id="@+id/createAccount_nameTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -110,9 +110,9 @@
         android:gravity="center_horizontal"
         android:hint="First and last name"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/newEmailTextBox"
-        app:layout_constraintEnd_toEndOf="@+id/newEmailTextBox"
+        app:layout_constraintBottom_toTopOf="@+id/createAccount_emailTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/createAccount_emailTextBox"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/newEmailTextBox"
-        app:layout_constraintTop_toBottomOf="@+id/logoImage2" />
+        app:layout_constraintStart_toStartOf="@+id/createAccount_emailTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount_logoImage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
